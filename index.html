@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ziyong Liu" />
+    <meta
+      name="description"
+      content="Choose your mood and energy level to receive a simple activity suggestion."
+    />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>What Should I Do Today?</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="page-container header-content">
+        <a class="site-name" href="./index.html">What Should I Do Today?</a>
+        <nav aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a aria-current="page" href="./index.html">Home</a></li>
+            <li><a href="./activities.html">Activities</a></li>
+            <li><a href="./ai-ideas.html">AI Ideas</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-container main-content">
+      <section class="hero" aria-labelledby="home-heading">
+        <p class="eyebrow">A quick activity picker</p>
+        <h1 id="home-heading">What should you do today?</h1>
+        <p>
+          Tell us how you feel and how much energy you have. We will suggest one simple
+          activity from our local list.
+        </p>
+      </section>
+
+      <section class="recommendation-panel" aria-labelledby="picker-heading">
+        <h2 id="picker-heading">Choose your current state</h2>
+        <form class="activity-form" id="activity-form">
+          <div class="form-field">
+            <label for="mood">Mood</label>
+            <select id="mood" name="mood" required>
+              <option value="">Select a mood</option>
+              <option value="happy">Happy</option>
+              <option value="calm">Calm</option>
+              <option value="bored">Bored</option>
+              <option value="stressed">Stressed</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="energy">Energy level</label>
+            <select id="energy" name="energy" required>
+              <option value="">Select an energy level</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+
+          <button class="primary-button" type="submit">Recommend an activity</button>
+        </form>
+
+        <div
+          class="recommendation-result"
+          id="recommendation-result"
+          aria-live="polite"
+        >
+          <h2>Your recommendation</h2>
+          <p>Select both options to receive an activity.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-container">
+        <p>Created by Ziyong Liu for CS5610 Web Development.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
